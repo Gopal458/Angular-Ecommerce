@@ -21,9 +21,8 @@ export class ProductDetails implements OnInit {
       const id:string = data['id'];
       this.api.getProductById(id).subscribe((data:any) =>{
         this.product=data.product;
-
-        console.log('text',this.product);
-        
+      }, (error) => {
+        console.error('Error fetching product:', error);
       })
     })
   }
