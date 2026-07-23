@@ -1,19 +1,21 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { Api } from './api';
+import { Cart } from './cart';
 
 @Component({
   selector: 'app-root',
-  imports: [FormsModule,RouterOutlet],
+  imports: [FormsModule,RouterOutlet,RouterLink],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
-export class App {
+export class App implements OnInit {
   protected readonly title = signal('frontend');
  
   serachText:string = '';
-  constructor(private api: Api) {}
+  cartCount:number = 0;
+  constructor(private api: Api,private cart:Cart) {}
 
   serachProducts() {
     this.api.searchProduct(this.serachText)
@@ -28,4 +30,10 @@ export class App {
   searchByEnter() {
     this.serachProducts();
   } 
+
+  ngOnInit(): void {
+    this.cart.currentItems.subscribe((items) => {
+      this.cartCount = items.length;
+    });
+  }
 }
