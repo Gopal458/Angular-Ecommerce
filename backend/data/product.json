@@ -1,0 +1,90 @@
+[{
+    "name": "product",
+    "description": "Product model",
+    "price": 100,
+    "rating":4.5,
+    "images":[
+        {
+            "image": "images/products/1.jpg"
+        },
+        {
+            "image": "images/products/2.jpg"
+        }
+    ],
+    "category": "Electronics",
+    "seller": "John Doe",
+    "stock": 10,
+    "numOfReviews": 5
+},
+{
+    "name": "product2",
+    "description": "Product model",
+    "price": 200,
+    "rating":4.5,
+    "images":[
+        {
+            "image": "images/products/2.jpg"
+        },
+        {
+            "image": "images/products/3.jpg"
+        }
+    ],
+    "category": "Electronics",
+    "seller": "John Doe",
+    "stock": 10,
+    "numOfReviews": 5
+},
+{
+    "name": "product3",
+    "description": "Product model",
+    "price": 300,
+    "rating":4.5,
+    "images":[
+        {
+            "image": "images/products/3.jpg"
+        },
+        {
+            "image": "images/products/4.jpg"
+        }
+    ],
+    "category": "Electronics",
+    "seller": "John Doe",
+    "stock": 10,
+    "numOfReviews": 5
+},
+{
+    "name": "product4",
+    "description": "Product model",
+    "price": 400,
+    "rating":4.5,
+    "images":[
+        {
+            "image": "images/products/4.jpg"
+        },
+        {
+            "image": "images/products/5.jpg"
+        }
+    ],
+    "category": "Electronics",
+    "seller": "John Doe",
+    "stock": 10,
+    "numOfReviews": 5
+},
+{
+    "name": "product5",
+    "description": "Product model",
+    "price": 500,
+    "rating":4.5,
+    "images":[
+        {
+            "image": "images/products/5.jpg"
+        },
+        {
+            "image": "images/products/1.jpg"
+        }
+    ],
+    "category": "Electronics",
+    "seller": "John Doe",
+    "stock": 10,
+    "numOfReviews": 5
+}]
