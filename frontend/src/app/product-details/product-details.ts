@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Api } from '../api';
 import { Cart } from '../cart';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-product-details',
@@ -16,7 +18,7 @@ export class ProductDetails implements OnInit {
   product:any=null;
   qty:number=1;
 
-  constructor(private route:ActivatedRoute,private api:Api,private cart:Cart){}
+  constructor(private route:ActivatedRoute,private api:Api,private cart:Cart,private toastr:ToastrService){}
 
   decreaseQty() {
     if (this.qty > 1) {
@@ -50,5 +52,8 @@ export class ProductDetails implements OnInit {
     }
     console.log('Adding to cart:', newCartItem);
     this.cart.addItem(newCartItem);
+    this.toastr.success('Product added to cart','Ecommerce',{
+      positionClass:'toast-top-right'
+    });
   }
 }

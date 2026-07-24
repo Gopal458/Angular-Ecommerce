@@ -19,13 +19,15 @@ export class Cart {
     console.log('existingItem', existingItem);
     if (existingItem) {
       // If item exists, increment quantity
-      existingItem.quantity = (existingItem.quantity || 1) + 1;
+      existingItem.qty = (existingItem.qty || 1) + 1;
     } else {
       // If item doesn't exist, add it with quantity 1
       this.itemsSource.next([...currentItems, item]);
     }
-    
+  }
 
+  updateItems(items: any[]){
+    this.itemsSource.next(items);
   }
 }
 

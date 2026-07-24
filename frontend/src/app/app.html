@@ -26,9 +26,10 @@
     </div>
 
     <div class="col-12 col-md-3 mt-4 mt-md-0 text-center">
-
-    <span id="cart" class="ml-3">Cart</span>
-    <span class="ml-1" id="cart_count">{{ cartCount }}</span>
+      <a routerLink="/cart">
+          <span id="cart" class="ml-3">Cart</span>
+          <span class="ml-1" id="cart_count">{{ cartCount }}</span>
+      </a>
     </div>
 </nav>
 <router-outlet />
